@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,900;1,800&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: url("https://images6.alphacoders.com/133/1334592.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-left: 2%;
+    margin-right: 2%;
+    overflow-y: scroll; /* Agrega una barra de desplazamiento vertical cuando sea necesario */
+}
+.body2{
+    background: url("https://images8.alphacoders.com/701/701229.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-left: 2%;
+    margin-right: 2%;
+    overflow-y: scroll; /* Agrega una barra de desplazamiento vertical cuando sea necesario */
+}
+.titulo-1{
+    color: #fff;
+    height: 45px;
+    margin-top: 0;
+    margin-bottom: -6.5%;
+    padding: 5px;
+    border-radius: 10%;
+    margin-left: 78.5%;
+    width: 300px;
+    font-size: 1.3rem;
+    background-color: #0f0707;
+    
+}
+.titulo-2{
+    color: #fff;
+    height: 55px;
+    margin-top: -6%;
+    margin-bottom: -6.5%;
+    padding: 5px;
+    border-radius: 10%;
+    margin-left: 75%;
+    width: 300px;
+    font-size: 1.1rem;
+    background-color: #0D0D0D;
+}
+h1{
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    justify-content: start;
+    align-items: center;
+}
+.container img{
+    width: 200px;
+    margin-top: -5%;
+    margin-bottom: 0%;
+}
+.container .content{
+    padding: 2%;
+    padding-top: 3%;
+    padding-bottom: 4%;
+    margin-top: -2%;
+    background: #110808;
+    border-radius: 10%;
+    width: 450px;
+    height: 600px;
+    margin-left: 3%;
+    box-shadow: 1px 5px 60px 0px #D84701;
+}
+
+.container .content:hover{
+    background-color: #3B2121;
+}
+.container .content form{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container .content input{
+    text-align: center;
+    margin-top: 3%;
+    border: 0;
+    border-radius: 5%;
+    height: 50px;
+    width: 70%;
+}
+.container .content .botons{
+    margin-top: 3%;
+    display: flex;
+}
+
+.container .content #env{
+    border-radius: 10px;
+    width: 100px;
+    background-color: #F2C53D;
+    margin-right: 10%;
+}
+
+.container .content #consult{
+    border-radius: 10px;
+    width: 100px;
+    background-color: #F2C53D;
+}
+.container .content #consult:hover{
+    background-color: white;
+}
+#container2{
+    max-height: 95vh;  /* Establece una altura máxima para la tabla */
+  }
+#container2 h1{
+    padding: 5px;
+    text-align: center;
+    color: white;
+}
+#container2 .botons-2{
+    display: flex;
+    justify-content: end;
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-bottom: 10px;
+}
+#container2 #delete{
+    border: 0px;
+    border-radius: 10px;
+    width: 100px;
+    background-color: rgb(255, 128, 17);
+}
+#container2  #new{
+    margin-left: 5px;
+    border: 0px;
+    border-radius: 10px;
+    width: 100px;
+    background-color: rgb(255, 128, 17);
+    
+}
+#container2  #delete:hover{
+    background-color: #F2C53D;
+}
+#container2  #new:hover{
+    background-color: #F2C53D;
+}
+.container h1{
+    color:#F2C53D;
+    width: 300px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.container .text-content{
+    color: white;
+    width: 400px;
+    text-align: left;
+    background: #0D0D0D;
+    padding: 2.5%;
+    margin-top: -1%;
+    border-radius: 10%;
+    font-size: 0.8rem;
+    height: 535px;
+}
+.container .text-content-2{
+    margin-top: -2%;
+    color: white;
+    width: 420px;
+    text-align: left;
+    background: #0D0D0D;
+    padding: 2% 3% 0% 3%;
+    border-radius: 10%;
+    height: 515px;
+    
+    
+}
+.container .text-content li {
+    margin-top: 4%;
+    font-size: 0.9rem;
+}
+.container .text-content ol{
+    text-align: left;
+}
+.container .text-content-2 li {
+    margin-top: 4%;
+    font-size: 0.9rem;
+}
+
+
+
+table {
+    margin-left: 5%;
+    color: white;
+    border: 0.5px solid #000000;
+    width: 90%;
+    /* Asegúrate de que la tabla ocupe el ancho completo del contenedor */
+    border-collapse: collapse; /* Mejora el espaciado de las celdas */
+}
+  
+  /* Estilos adicionales para la tabla (opcional) */
+table td, table th {
+    text-align: center;
+    border: 0.5px solid #000000; /* Agrega bordes a las celdas */
+    padding: 8px;
+     /* Agrega espacio entre el contenido y el borde de las celdas */
+}
+table th {background-color: #000; }
+
+table tr:nth-child(odd) {background-color: rgb(13, 14, 13);opacity: 0.8;}
+
+table tr:nth-child(even) {background-color: rgb(63, 61, 60);opacity: 0.8;}
+
+#tarot-img {
+    opacity: 0;
+    
+   
+transform: translateX(-100%); /* Inicialmente, mueve la imagen fuera de la vista hacia la izquierda */
+    
+   
+animation: slideImage 2s forwards; /* La animación dura 2 segundos */
+}
+
+@keyframes slideImage {
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Lleva la imagen de vuelta a su posición original (derecha) */
+    }
+}
+.mi-contenedor-estilo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:3%;
+    margin-bottom: 6%;
+    margin-left: 20%;
+    padding:2%;
+    border-radius: 5%;
+    background: black;
+    width: 60%;
+    box-shadow: 1px 5px 60px 0px #D84701;
+    
+}
+.mi-contenedor-estilo-2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.iconos {
+    margin-top: 8%;
+    margin-left: 88%;
+    display: flex;
+    flex-direction: column;
+    position: fixed; /* Añade posición fija para que se mantenga en la misma posición en la página */
+  }
+  
+  .icon-container {
+    position: relative;
+    margin: 10px;
+  }
+  
+  .nombre-red-social {
+    display: none;
+    position: absolute;
+    top: 25%;
+    font-size: 15;
+    left: -155px;
+    background: rgba(0, 0, 0, 0.7);
+    height: 50px;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+  
+  .iconos .social {
+    width: 50%;
+    margin-bottom: 2.5%;
+  }
+  #datetime{
+    margin-top: -10%;
+    background-color: #0D0506;
+    padding: 2.5%;
+    font-size: 1.2rem;
+    color: white;
+    margin-left: -2%;
+    text-align: center;
+  }
+  #datetime2{
+    color: white;
+    margin-left: 67%;
+  }
+  .bocadillo {
+    position: relative;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px solid #F2C53D;
+    max-width: 250px;
+    margin: 20px;
+    margin-left: 60%;
+    margin-top:-48%;
+}
+
+.bocadillo:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #F2C53D transparent transparent transparent;
+}

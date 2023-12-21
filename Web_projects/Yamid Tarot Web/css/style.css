@@ -1,0 +1,262 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: url("https://mir-s3-cdn-cf.behance.net/project_modules/fs/82a5ca84498705.5d5ecc39a7609.gif");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* Fija el fondo en su posición */
+  height: 100vh;
+}
+
+header {
+  /* position: fixed; */
+  width: 100%;
+  padding: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.yamid-icono {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+#abrir, #cerrar {
+  font-size: 30px;
+}
+
+header .fa-solid {
+  display: none;
+  cursor: pointer;
+}
+
+header .cerrar-menu {
+  display: none;
+}
+
+header h1 {
+  font-size: 1.1rem;
+  margin-left: 2%;
+  padding: 1%;
+  cursor: pointer;
+}
+
+header ul {
+  background: black;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  margin-left: -35%;
+}
+
+header ul li {
+  padding: 2%;
+}
+
+header ul li a {
+  font-size: 15px;
+  color: white;
+  width: 100%;
+  display: block; /* Hacer que el enlace ocupe todo el ancho */
+  padding: 0.5em; /* Añadir espaciado al enlace para hacerlo más grande y fácil de hacer clic */
+  text-align: center; /* Centrar el texto horizontalmente */
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s; /* Transición suave para cambios de color y fondo */
+}
+
+header ul li a:hover {
+  background: yellow;
+  color: black; /* Cambiar el color del texto al pasar el mouse */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  padding: 1%;
+  color: white;
+  margin-bottom: 2%;
+}
+
+main h2 {
+  margin-top: 3%;
+  font-size: 2rem;
+  text-align: centeR;
+}
+
+main h3 {
+  margin-top: 3%;
+  text-align: center;
+}
+
+main img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+main p {
+  text-align: center;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+  background: #c3c3c3;
+  padding: 5%;
+  border-radius: 10px;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  color: white;
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ola {
+  margin-top: -15%;
+}
+
+@media (max-width: 1000px) {
+  body {
+    background-position: right;
+  }
+  header {
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 5%;
+    font-size: 1.5rem;
+    padding: 2%;
+  }
+  header .fa-solid {
+    display: block;
+    margin-right: 10%;
+  }
+  header .cerrar-menu {
+    display: block;
+  }
+  header .icono-yamid {
+    width: 150px;
+    height: 150px;
+    padding: 0%;
+    margin-left: 2%;
+  }
+  #cerrar {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: black;
+    width: 250px;
+    padding: 0%;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  }
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  .header .visible {
+    height: 100vh;
+  }
+  header ul {
+    background: #000000;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    width: 100%;
+  }
+  header ul li {
+    background: black;
+    width: 100%;
+    text-align: right;
+    padding-right: 10%;
+  }
+  header ul li:hover {
+    background: yellow;
+  }
+  .ola {
+    margin-top: -30%;
+  }
+  main {
+    margin-top: 10%;
+  }
+}
+@media (max-width: 609px) {
+  main img {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 300px) {
+  main h2 {
+    margin-top: 50%;
+    font-size: 1.8em;
+  }
+  main img {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-height: 600px) {
+  body {
+    background: url("https://steamuserimages-a.akamaihd.net/ugc/2134202144209919897/ABDBCFD8BB24488A5F4169918C540061429C774E/?imw=1024&imh=576&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true");
+  }
+  main img {
+    width: 100px;
+    height: 100px;
+  }
+  .ola {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

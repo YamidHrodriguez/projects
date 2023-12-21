@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background: rgb(32, 4, 54);
+    background: url("https://images4.alphacoders.com/970/thumb-1920-97048.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(62, 13, 102);
+    color: white;
+    width: 100%;
+    background: url("https://images4.alphacoders.com/970/thumb-1920-97048.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container  h1{
+    color: white;
+    background-color:#1b1b2d;
+    text-align: center;
+    font-size: 2rem;
+    background-color:none;
+    width: 100%;
+    padding: 1%;
+    
+}
+.container article{
+    border: 1px solid rgb(126, 126, 126);
+    width: 25%;
+    padding: 2.5%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.container article img{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    margin-top: 5%;
+}
+.container .signsfu{
+    background-color: #2a3251;
+    color: white;
+    opacity: 0.90;
+    
+}
+.container .signsti{
+    background-color: #252540;
+    color: white;
+    opacity: 0.90;
+}
+.container .signsai{
+    background-color: #1c2133;
+    color: white;
+    opacity: 0.90;
+}
+.container .signsag{
+    background-color: #323a5c;
+    color: white;
+    opacity: 0.90;
+}
+.container article ul{
+    height: 150px;
+}
+h2{
+    font-size: 3rem;
+}
+h3{
+    font-size: 1.5rem;
+   
+}
+ul{
+    margin-bottom: 15%;
+    width: 80%;
+    padding: 2%;
+}
+li{
+    text-align: left;
+    color: white;
+    font-size: 1.1rem;
+    
+    
+}
+.container .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 350px;
+    height:350px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+.container .content .front, .container .content .back{
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    backface-visibility: hidden;
+}
+.container.content .front{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .content .back{
+    display: flex;
+    transform: rotateY(180deg);
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    width: 250px;
+    height: 250px;
+    background-color: #262c45;
+}
+
+.container .content:hover{
+    transform: rotateY(180deg);
+}
+footer{
+    background: #1b1b2d;
+    padding: 1%;
+    text-align: center;
+    width: 100%;
+}
+@media(max-width:1200px){
+    body{
+        display: flex;
+        justify-content: center;
+        background: rgb(32, 4, 54);
+    
+    }
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    main{
+        width: 100%;
+        border: none;
+        margin-bottom: 0;
+    }
+    .container article{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+    .container h1{
+        background-color: none;
+        font-size: 2rem;
+        margin-bottom: 0;
+    }
+    .container article img{
+        width: 150px;
+        height: 150px;
+        padding: 0;
+    }
+    .container article ul{
+        width: 80%;
+        margin-left: 20%;
+        padding: 0;
+    }
+}
+@media(max-width: 750px){
+    
+    .container article{
+        width: 100%;
+        
+    }
+    .container h1{
+        margin-bottom: 0;
+        border: none;
+    }
+    main{
+        width: 100%;
+        margin-top:0;
+        margin-bottom:0;
+        border: none;
+    }
+}

@@ -1,0 +1,21 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid yellow;
+}
+
+td, th{
+    border: 1px solid yellow;
+    padding: 8px;
+}

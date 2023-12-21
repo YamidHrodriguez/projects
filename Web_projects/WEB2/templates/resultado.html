@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles2.css') }}">
+    <title>Participantes live de Tarot</title>
+</head>
+<body>
+    <header>
+        <h1>Resultado de la consulta</h1>
+    </header>
+    <audio id="background-music-2" loop autoplay>
+        <source src="{{ url_for('static', filename ='media/Snowfall - Øneheart x Reidenshi 10 Minutes (Slowed Reverb).mp3') }}" type="audio/mpeg">
+    </audio>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Pregunta Concreta</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in result %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="btns">
+            <h2 style="margin-right: 5%; margin-bottom: 2.5%;">Menu de opciones</h2>
+                 <a href="/">Volver al formulario</a>
+            <form method="POST" action="/procesar_formulario" style="display: flex; ">
+                <input type="submit" name="borrar" id="borrar" value="Borrar Todos los Registros">
+                <input type="submit" name="redirigir" id="redirigir" value="Iniciar dinamica">
+            </form>
+        </div>
+    </div>
+    <script>
+        const music = document.getElementById("background-music-2");
+
+        document.addEventListener("DOMContentLoaded", () => {
+            if (music) {
+                music.play();
+            } else {
+                console.log("Error: El elemento de audio no se encontró.");
+            }
+        });
+    </script>    
+</body>
+</html>

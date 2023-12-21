@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarot en vivo</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <!--Instala los iconos de Font Awesome: https://fontawesome.com/-->
+    <script src="https://kit.fontawesome.com/8786a88843.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+   
+    <audio id="miSonido" loop autoplay >
+        <source src="/sounds/onedreams.mp3" type="audio/mp3">
+        Tu navegador no soporta la etiqueta de audio.
+    </audio> 
+    
+    <div class="faldon-content">
+        <p style="cursor: pointer;" class="faldon-text" onclick="reproducirAudio()">
+            ✨Comparte el video con tus amigos y participa en la lectura de una pregunta gratuita durante el live
+            <span style="margin-left: O.5%;">✨ comenta tu nombre completo, fecha de nacimiento y pregunta</span>
+        </p>
+    </div>
+        
+    <div id="container" class="container">
+        <div class="content">
+            <div class="form">
+                <form action="/guardar" method="post">
+                    <h3 style="font-size: 2rem; padding: 2%;">FORMULARIO</h3>
+                    <label for="name">Nombre completo: </label>
+                    <input type="text" id="name" name="name" placeholder="Nombre del consultante">
+                    <label for="date">Fecha de nacimiento</label>
+                    <input type="date" id="date" name="date">
+                    <textarea name="pregunta" id="pregunta" cols="20" rows="10" placeholder="Pregunta del consultante"></textarea>
+                    <input type="submit" value="enviar" id="submit">
+                    <div class="funciones" style="width: 100%; align-items: center; display: flex; justify-content: space-evenly ; padding: 5%;">
+                        <a id="ver" href="/resultados" style="cursor: pointer;">Ver resultados</a>
+                        <a id="borrar" href="/formatear_registros" style="cursor: pointer;">Formatear registros</a>
+                    </div>       
+                </form>
+            </div>
+            <main style="display: flex; flex-direction: column; align-items: center;">
+                <div class="circle-background" style="border-radius: 50%; width: 400px; height: 400px; border: 2px solid  #eee; "></div>
+                <div class="video-container" id="video-container">
+                    <div class="overlay"></div>
+                    <video style="border-radius: 50%;" id="video-stream" autoplay playsinline muted></video>
+                </div>
+            </main>
+            
+            <div class="botons">
+                <div class="content">
+                    <h3 style="padding-top:5%;font-size: 2rem;">TAROT EN VIVO CON YAMID</h3>
+                    <br>
+                    <div class="btns">
+                        <!--Coloca en los botones los iconos de on y off con las clases que tenia antes-->
+                        <button type="button" id="btn" style="transform: rotate(180deg);"><i style="font-size: 2rem;" class="fa-solid fa-power-off"></i></button>
+                        <button type="button" id="stopButton"><i style="font-size: 2rem;" class="fa-solid fa-power-off"></i></button>
+                    </div>
+                    
+                    <p style="margin-top: 5%; font-size: 1.8rem; padding: 10%;width: 100%; text-align: center;">Consultas al: <br> <br><i style="color: green;" class="fa-solid fa-phone"></i>  <span style="color: rgb(104, 233, 104);">Whatsapp </span>+573202808299</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/8786a88843.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

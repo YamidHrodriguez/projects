@@ -1,0 +1,191 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: url("https://1.bp.blogspot.com/-B42E0UkiV-M/XSnjZjdhKSI/AAAAAAAAL4o/fy2J6fXSl98WbtMYbAklhtw3ss2xODx5ACLcBGAs/s1600/Paisaje-refelejo-naturaleza-2.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333; /* Cambia el color de fondo a tu preferencia */
+    z-index: 1000;
+    padding: 2%;
+    margin-bottom: 2%; 
+}
+.container {
+    margin-top: 100px; /* Ajusta el valor según el alto de tu header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+table {
+    width: 95%;
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid black;
+    table-layout: fixed;
+}
+
+th {
+    border-right: 1px solid black;
+}
+
+td, tr, tbody, thead {
+    border: 1px solid black;
+    text-align: center;
+    padding: 2%;
+}
+
+/* .btns{
+    display: flex;
+    flex-wrap:nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 2%;
+}
+
+.btns a{
+    background-color: #818181;
+    padding: 20.5px;
+    border-radius: 10px;
+    color: white;
+    height: 95px;
+}
+.btns a:hover{
+    background-color: #333;
+    color: white;
+}
+.btns input{
+    background-color: #818181;
+    padding: 15%;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-left: 5%;
+}
+.btns input:hover{
+    background-color: #333;
+    color: white;
+} */
+
+.btns{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    background-color: #818181;
+    border-radius: 10px;
+}
+.btns a {
+    display: block; /* Cambia a modelo de caja en bloque */
+    text-align: center; /* Centra horizontalmente */
+    line-height: 25px; /* Centra verticalmente ajustando la altura de línea */
+    background-color: #818181;
+    padding: 1%;
+    border-radius: 10px;
+    color: white;
+    height: 50px;
+}
+
+.btns input{
+    background-color: #818181;
+    padding: 2%;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 50px;
+
+}
+.btns a:hover{
+    background-color: #333;
+    color: white;
+}
+.btns input:hover{
+    background-color: #333;
+    color: white;
+}
+form{
+    display: flex;
+}
+/* Aplicar estilos a todas las celdas de la tabla */
+td:not(:first-child), th:not(:first-child) {
+    /* Estilos para todas las celdas excepto la primera columna (columna de ID) */
+    background-color: #c0c0c0;
+    color: #333;
+}
+
+/* Estilos específicos para la primera columna (columna de ID) */
+td:first-child, th:first-child {
+    /* Estilos para la primera columna (columna de ID) */
+    background-color: grey;
+    color: inherit;
+    width: 5%;
+}
+/* Estilos para las celdas de la columna de Pregunta Concreta */
+td:nth-child(4), th:nth-child(4) {
+    white-space: normal;  /* Permite que el texto se ajuste automáticamente en varias líneas si es necesario */
+    overflow: hidden;     /* Oculta el contenido que desborda el ancho de la celda */
+    word-wrap: break-word; /* Rompe las palabras largas si no caben en la celda */
+}
+@media(max-width:865px){
+    .btns, form{
+        flex-direction: column;
+        width: 95%;
+        height: auto;
+        margin-bottom: 1%;
+        margin-top: 1%;
+        justify-content: space-between;
+    }
+    .btns a{
+        text-align: center;
+        width: 95%;
+    }
+    .btns form input{
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 1%;
+    }
+    .container{
+        margin-top: -1.5%;
+        padding: 50px;
+        display: flex;
+        flex-direction:column-reverse ;
+    }
+    .container table{
+        margin-top: 5%;
+    }
+    header{
+        display: none;
+    }
+}

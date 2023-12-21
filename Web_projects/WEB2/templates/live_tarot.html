@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Bienvenido a la Dinámica de Tarot</title>
+</head>
+<body>
+    <header>
+        <p id="datetime"><span id="fechaYHora"></span><br>Colombia</p>
+        <script>
+            var fechaYHoraElemento = document.getElementById("fechaYHora");
+
+            function actualizarFechaYHora() {
+                var fechaHoraActual = new Date();
+                fechaYHoraElemento.innerHTML = fechaHoraActual.toLocaleString();
+            }
+
+            setInterval(actualizarFechaYHora, 1000);
+
+            actualizarFechaYHora();
+        </script>
+        <h1 class="titulo-1" id="tarotTitle">TAROT EN VIVO 🔴</h1>
+        <script>
+            const tarotTitle = document.getElementById('tarotTitle');
+            let isEncendido = true;
+            // Función para alternar el estado del título
+            function alternarTextoTitulo() {
+                isEncendido = !isEncendido;
+                if (isEncendido) {
+                    tarotTitle.innerText = 'TAROT EN VIVO 🔴';
+                } else {
+                    tarotTitle.innerText = 'TAROT EN VIVO ⚪';
+                }
+            }
+            // Encender el título inicialmente
+            alternarTextoTitulo();
+            // Configurar un intervalo para alternar el estado cada 1000 milisegundos (1 segundo)
+            setInterval(alternarTextoTitulo, 1000);
+        </script>
+    </header>
+    
+    <div class="container">
+        <div class="content">
+            <form method="POST" action="/procesar_formulario">
+                <img id="yo" src="static/images/2-removebg-preview.png" alt="Yamid Tarot animado">
+                <audio id="background-music-2" loop autoplay>
+                    <source src="{{ url_for('static', filename='media/oneheart-fast.mp3') }}" type="audio/mpeg">
+                </audio>
+                <label for="name">Nombre completo: </label>
+                <input type="text" id="name" name="name" placeholder="Nombre del participante" autocomplete="off">
+                <label for="date">Fecha de nacimiento: </label>
+                <input type="date" id="date" name="date" value="2023-01-01" placeholder="Fecha de nacimiento del participante" autocomplete="off">
+                <label for="question">Pregunta concreta: </label>
+                <input type="text" id="question" name="question" placeholder="Pregunta concreta" autocomplete="off">
+                <section class="botons">
+                    <input type="submit" id="env" name="env" value="Enviar">
+                    <input type="submit" id="consult" name="consult" value="Consultar DB">
+                </section>
+            </form>
+        </div>
+    </div>
+
+    <div id="bocadillo" class="bocadillo" style="margin-top:-47.5%;">
+        ¡Bienvenid@ a esta dinámica de tarot!
+    </div>
+
+    <div class="iconos">
+        <div class="icon-container">
+            <img src="static/iconos/facebook.png" class="social" data-nombre="Facebook">
+            <div class="nombre-red-social">@YAMIDOFICIAL</div>
+        </div>
+        <div class="icon-container">
+            <img src="static/iconos/whatsapp.png" class="social" data-nombre="WhatsApp">
+            <div class="nombre-red-social">+573202808299</div>
+        </div>
+        <div class="icon-container">
+            <img src="static/iconos/instagram.png" class="social" data-nombre="Instagram">
+            <div class="nombre-red-social">@tarotistayamidr</div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $(".icon-container").on("click", function() {
+                $(this).find(".nombre-red-social").toggle();
+            });
+        });
+    </script>
+
+
+    <script>
+        const logo = document.getElementById("yo");
+        const music = document.getElementById("background-music-2");
+
+        logo.addEventListener("click", () => {
+            if (music) {
+                music.play();
+            } else {
+                console.log("Error: El elemento de audio no se encontró.");
+            }
+        });
+        document.addEventListener("DOMContentLoaded", () =>{
+            if (music) {
+                music.play();
+            } else {
+                console.log("Error: El elemento de audio no se encontró.");
+            }
+        });
+    </script>
+</body>
+</html>

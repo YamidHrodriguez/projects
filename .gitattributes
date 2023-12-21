@@ -1,0 +1,2 @@
+Web_projects/stream_Tarot/public/sounds/onedreams.wav filter=lfs diff=lfs merge=lfs -text
+Web_projects/public/sounds/onedreams.wav filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles3.css') }}">
+    <title>Tarot en vivo</title>
+</head>
+<body id="body">
+    <div class="lightbulb"></div>
+    <audio id="background-music" loop autoplay>
+        <source src="{{ url_for('static', filename='media/Snowfall - Øneheart x Reidenshi 10 Minutes (Slowed Reverb).mp3') }}" type="audio/mpeg">
+    </audio>
+    <div class="main">
+        <h1 id="tit">DINAMICA DE TAROT EN VIVO</h1>
+        <div class="container">
+            <div class="circle">
+                <img id="image" src="{{ url_for('static', filename='images/Black_and_White_Illustrative_Clothing_Business_Logo-removebg-preview.png') }}">
+                <video id="video" autoplay playsinline></video>
+            </div>
+        </div>
+    </div>
+    <div class="social">
+        <img class="icon" src="{{ url_for('static', filename='images/facebook (1).png') }}" data-network="Facebook: @YAMIDOFICIAL">
+        <img class="icon" src="{{ url_for('static', filename='images/instagram (1).png') }}" data-network="Instagram: @TarotistaYamidR">
+        <img class="icon" src="{{ url_for('static', filename='images/whatsapp (1).png') }}" data-network="WhatsApp: +573202808299">
+    </div>
+    <div class="info-container">
+        <p class="info-text"></p>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    
+</body>
+</html>

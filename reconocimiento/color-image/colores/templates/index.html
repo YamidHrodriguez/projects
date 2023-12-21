@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Detection</title>
+    <style>
+        /*Agregar fuentes poppins*/
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            background-color: #c3c6c7;
+        }
+        .container{
+            display: flex;
+            flex-direction: row-reverse;
+            width: 100%;
+            height: 100vh;
+            background-color: none;
+            
+        }
+        .content{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+        
+            width: 100%;
+            height: 450px;
+            padding: 5%;
+            margin-top: -5%;
+        }
+        h1 {
+            text-align: center;
+            width: 100%;
+            padding: 1%;
+            background-color: #694c32;
+            color: white;
+        }
+        #video-container {
+            width: 80%;
+            height: 500px;
+            max-width: 800px; /* Ancho máximo del contenedor del video */
+            margin:20px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid black;
+            background-color: white;
+        }
+
+        #video {
+            width: 100%;
+        }
+        canvas {
+            display: none;
+        }
+        #color-palette {
+            margin-top: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 20%;
+            height: 500px;
+        }
+        .color-box {
+            width: 50%;
+            height: 70px;
+            display: inline-block;
+            margin: 5px;
+            position: relative;
+        }
+        .color-code {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+        .color-box:hover{
+            cursor: pointer;
+            border: 1px solid black;
+            border-radius: 10px;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Color Palette Detection and Generating</h1>
+    
+    <div class="container">
+        <div class="content">
+            <div id="color-palette"></div>
+            <div id="video-container">
+                <video id="video" playsinline autoplay></video>
+            </div>
+            <canvas id="canvas"></canvas>
+            
+            
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                const video = document.getElementById('video');
+                const canvas = document.getElementById('canvas');
+                const ctx = canvas.getContext('2d');
+                const colorPaletteDiv = document.getElementById('color-palette');
+
+                navigator.mediaDevices.getUserMedia({ video: true })
+                    .then((stream) => {
+                        video.srcObject = stream;
+                    })
+                    .catch((error) => {
+                        console.error('Error accessing camera:', error);
+                    });
+
+                video.addEventListener('play', () => {
+                    const width = video.videoWidth;
+                    const height = video.videoHeight;
+
+                    canvas.width = width;
+                    canvas.height = height;
+
+                    function processFrame() {
+                        ctx.drawImage(video, 0, 0, width, height);
+                        const imageData = ctx.getImageData(0, 0, width, height);
+                        const dataUrl = canvas.toDataURL();
+
+                        fetch('/get_palette', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({ image_data: dataUrl }),
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            const colors = data.colors;
+
+                            // Construir y mostrar la paleta en la interfaz
+                            const colorPaletteHTML = colors.map(color => {
+                                return `
+                                    <div class="color-box" style="background-color: ${color};">
+                                        <div class="color-code">${color}</div>
+                                    </div>
+                                `;
+                            }).join('');
+
+                            colorPaletteDiv.innerHTML = colorPaletteHTML;
+                        });
+
+                        requestAnimationFrame(processFrame);
+                    }
+
+                    video.play();
+                    processFrame();
+                });
+            });
+
+
+            </script>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

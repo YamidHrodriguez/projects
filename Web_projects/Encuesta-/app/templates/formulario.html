@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename ='css/styles.css') }}">
+    <script>
+        // Desactivar la funcionalidad de retroceso
+        history.pushState(null, null, document.URL);
+        window.addEventListener('popstate', function () {
+            history.pushState(null, null, document.URL);
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <a href="{{url_for('main.index')}}"><img src="{{ url_for('static', filename ='images/Marvy_Shopmarket.png') }}" alt="Icono Marvy Shopmarket" class="icono-m"></a>
+        <h1>Encuesta</h1>
+        <a href="{{url_for('main.index')}}"><img src="{{ url_for('static', filename ='images/SENA.png') }}" alt="Sena icono" class="icono-m"></a>
+        
+    </header>
+
+    <div class="obj">
+        <div class="content">
+            <h2>Objetivo:</h2>
+            <div class="objetive">
+                <p>Esta encuesta es realizada a 50  tiendas de barrio de la ciudad de Pamplona, Norte de Santander, por los aprendices de ÁNALISIS Y DESARROLLO DE SOFTWARE del CENTRO PARA EL DESARROLLO RURAL Y MINERO (CEDRUM) SENA. Lo anterior con la finalidad de recolectar información, y poder establecer los requisitos funcionales y no funcionales de la nueva aplicación "MARVY SHOPMARKET" que busca apoyar a los tenderos, de la mano de esta herramienta digital, en actividades relacionadas con la gestión de sus ventas y el control de sus inventarios. </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <form method="POST" action="{{ url_for('main.procesar_formulario') }}">
+
+            <article>
+                <label for="nombre">Nombre de la tienda</label>
+                <input name="nombre" id="nombre" type="text">
+            </article>
+            <article>
+                <label for="pregunta-1">Pregunta 1: ¿Utiliza su tienda algun método digital para registrar la información de sus ventas, proveedores y/o productos?  </label>
+                <label><input name="pregunta-1" id="pregunta-1" value="si" type="radio">Si</label>
+                <label><input name="pregunta-1" id="pregunta-1" value="no" type="radio">No</label>
+            </article>
+            <article> 
+                <label for="">Pregunta 2: ¿Utiliza su tienda algún metodo tradicional (cuaderno, lapicero, hojas de calculo, etc) para registrar la información de sus ventas, proveedores y/o productos? </label>
+                <label><input name="pregunta-2" id="pregunta-2" value="si" type="radio">Si</label>
+                <label><input name="pregunta-2" id="pregunta-2" value="no" type="radio">No</label>
+            </article>
+            <article>
+                <label for="">Pregunta 3: ¿Lleva un presupuesto y un control de su inventario?</label>
+                <label><input name="pregunta-3" id="pregunta-3" value="diariamente" type="radio">Si, diariamente</label>
+                <label><input name="pregunta-3" id="pregunta-3" value="semanalmente" type="radio">Si, semanalmente</label>
+                <label><input name="pregunta-3" id="pregunta-3" value="mensualmente" type="radio">Si, mensualmente</label>
+                <label><input name="pregunta-3" id="pregunta-3" value="aveces" type="radio">Si, A veces</label>
+                <label><input name="pregunta-3" id="pregunta-3" value="no" type="radio">No</label>
+            </article>
+            <article>
+                <label for="">Pregunta 4: ¿Realiza informes de ventas y/o recibos a los clientes y proveedores de su tienda?  </label>
+                <label><input name="pregunta-4" id="pregunta-4" value="si" type="radio">Si</label>
+                <label><input name="pregunta-4" id="pregunta-4" value="no" type="radio">No</label>
+            </article>
+            
+            <article>
+                <label for="">Pregunta 5: Del 1 al 10 ¿qué tan seguro se siente con el método que utiliza actualmente su tienda con respecto a la preservación e integridad de los datos? </label>
+                <label><input name="pregunta-5" id="pregunta-5" value="1" type="radio">1</label>
+                <label><input name="pregunta-5" id="pregunta-5" value="2" type="radio">2</label>
+                <label><input name="pregunta-5" id="pregunta-5" value="3" type="radio">3</label>
+                <label><input name="pregunta-5" id="pregunta-5" value="4" type="radio">4</label>
+                <label><input name="pregunta-5" id="pregunta-5" value="5" type="radio">5</label>
+                <label><input name="pregunta-5" id="pregunta-5" value="6" type="radio">6</label>
+                <label><input name="pregunta-5" id="pregunta-5" value="7" type="radio">7</label>
+                <label><input name="pregunta-5" id="pregunta-5" value="8" type="radio">8</label>
+                <label><input name="pregunta-5" id="pregunta-5" value="9" type="radio">9</label>
+                <label><input name="pregunta-5" id="pregunta-5" value="10" type="radio">10</label>
+            </article>
+            <article>
+                <label for="">Pregunta 6: Del 1 al 10 ¿qué tan eficiente calificaría el método para registrar la información de ventas, productos y/o proveedores de su tienda? </label>
+                <label><input name="pregunta-6" id="pregunta-6" value="1" type="radio">1</label>
+                <label><input name="pregunta-6" id="pregunta-6" value="2" type="radio">2</label>
+                <label><input name="pregunta-6" id="pregunta-6" value="3" type="radio">3</label>
+                <label><input name="pregunta-6" id="pregunta-6" value="4" type="radio">4</label>
+                <label><input name="pregunta-6" id="pregunta-6" value="5" type="radio">5</label>
+                <label><input name="pregunta-6" id="pregunta-6" value="6" type="radio">6</label>
+                <label><input name="pregunta-6" id="pregunta-6" value="7" type="radio">7</label>
+                <label><input name="pregunta-6" id="pregunta-6" value="8" type="radio">8</label>
+                <label><input name="pregunta-6" id="pregunta-6" value="9" type="radio">9</label>
+                <label><input name="pregunta-6" id="pregunta-6" value="10" type="radio">10</label>
+            </article>
+            </article>
+            <article>
+                <label for="">Pregunta 7: ¿Sabe Usted qué es software? </label>
+                <label><input name="pregunta-7" id="pregunta-7" value="si" type="radio">Si</label>
+                <label><input name="pregunta-7" id="pregunta-7" value="no" type="radio">No</label>
+            </article>
+            <article>
+                <label for="">Pregunta 8: ¿Estaría Usted interesado en implementar una solución tecnológica para registrar las ventas, proveedores y productos de su tienda?</label>
+                <label><input name="pregunta-8" id="pregunta-8" value="si" type="radio">Si</label>
+                <label><input name="pregunta-8" id="pregunta-8" value="no" type="radio">No</label>
+            </article>
+            <article>
+                <label for="">Pregunta 9: ¿Cree que obtendría un beneficio al implementar un software que apoye los procesos en su tienda?</label>
+                <label><input name="pregunta-9" id="pregunta-9" value="si" type="radio">Si</label>
+                <label><input name="pregunta-9" id="pregunta-9" value="no" type="radio">No</label>
+            </article>
+            <article>
+                <label for="">Pregunta 10: ¿Qué caracteristicas le gustaria que tuviera este software para tiendas como la de Usted?</label>
+                <textarea name="pregunta-10" id="pregunta-10" cols="30" rows="10"></textarea>
+            </article>
+            <article class="btn">
+                <input type="submit" name="btn" id="btn" value="Enviar">
+            </article>
+            
+        </form>
+        <a class="btn-obj" href="{{url_for('main.resultados')}}">Ver registros</a>
+    </div>
+    <div class="obj-2">
+        <div class="content-2">
+            <h2>Politicas de privacidad:</h2>
+            <div class="objetive">
+                <p>Esta encuesta es realizada a 50  tiendas de barrio de la ciudad de Pamplona, Norte de Santander. Lo anterior con la finalidad de recolectar información acerca de la gestión de ventas y control de inventarios de las mismas, y poder establecer los requisitos funcionales y no funcionales de la nueva aplicación "MARVY SHOPMARKET" que busca apoyar a los tenderos en esos procesos de la mano de esta herramienta digital segura, intuitiva, eficiente para agilizar los mismos. </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

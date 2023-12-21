@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla CSV</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+<div class="container-2">
+    <h1 style="background-color: black;width: 100%; text-align: center;padding: 2%;">REGISTROS LIVE DE TAROT</h1>
+    <table id="csvTable" border="1">
+        <!-- La tabla se llenará dinámicamente con JavaScript -->
+    </table>
+</div>
+<script>
+// Función para leer un archivo CSV y crear una tabla HTML
+function mostrarTablaCSV() {
+    // Ruta del archivo CSV
+    const csvFilePath = 'data/archivo.csv';
+
+    // Obtener la referencia de la tabla en el DOM
+    const tabla = document.getElementById('csvTable');
+
+    // Encabezados específicos (puedes ajustarlos según tus necesidades)
+    const encabezados = ['Nombre', 'Fecha de Nacimiento', 'Pregunta'];
+
+    // Crear fila de encabezados
+    const encabezadoFila = tabla.insertRow();
+    encabezados.forEach(function (encabezado) {
+        const celda = encabezadoFila.insertCell();
+        celda.textContent = encabezado;
+        encabezadoFila.classList.add('encabezado');
+    });
+
+    // Realizar la solicitud para obtener el archivo CSV
+    fetch(csvFilePath)
+        .then(response => response.text())
+        .then(data => {
+            const lines = data.split('\n');
+            console.log(lines)
+            // Crear filas y celdas en la tabla
+            lines.forEach(function (line) {
+                const campos = line.split(',');
+                const fila = tabla.insertRow();
+
+                campos.forEach(function (campo) {
+                    const celda = fila.insertCell();
+                    celda.textContent = campo;
+                });
+                
+            });
+        })
+        .catch(error => {
+            console.error('Error al cargar el archivo CSV:', error);
+        });
+}
+
+// Llamar a la función cuando la página se cargue
+document.addEventListener('DOMContentLoaded', mostrarTablaCSV);
+</script>
+
+</body>
+</html>

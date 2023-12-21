@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background:url("https://e1.pxfuel.com/desktop-wallpaper/541/403/desktop-wallpaper-painting-vincent-van-gogh-starry-night-the-starry-night.jpg");
+    
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container{
+    width: 60%;
+    height: 100vh;
+}
+main{
+    
+    padding: 5%;
+    color: white;
+    background-image: url("https://uploads.metropoles.com/wp-content/uploads/2019/10/10005935/IMG-20191009-WA0087-800x533.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+}
+main img{
+    border-radius: 50%;
+    width: 300px;
+    height: 400px;
+}
+.a{
+    background-color: rgba(36,59,127,0.9);
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4%;
+    margin-bottom: 0%;
+}
+.a p{
+    width: 80%;
+}
+.b{
+    width: 100%;
+    background-color: rgba(37,88,140,0.9);
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+.b p{
+    margin-left: 3%;
+    background: none;
+    color: white;
+    border-radius: 5%;
+    margin: 4%;
+    padding: 3%;
+    width: 50%;
+}
+footer{
+    background-color:#EAB63F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    color: white;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+@media(max-width:900px){
+    .container{
+        width: 80%;
+    }
+    footer p{
+        font-size: 10px;
+    }
+}

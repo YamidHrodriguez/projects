@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: black;
+    color: #fff;
+    overflow: hidden;
+}
+header{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #8f8f8f;
+}
+.container{
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+main{
+    background-color: #8f8f8f;
+    height: 100vh;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+main .menu{
+    background: #8f8f8f;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    height: 70%;
+}
+main .menu #income, #egress, #buy, #report, #debt{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    margin: 1px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+}
+main .menu #income:hover{
+    background-color: rgb(1, 98, 1);
+}
+main .menu #egress:hover{
+    background-color: rgb(143, 0, 0);
+}
+main .menu #buy:hover{
+    background-color: rgb(20, 20, 84);
+}
+main .menu #report:hover{
+    background-color: rgb(110, 94, 75);
+}
+main .menu #debt:hover{
+    background-color: rgb(222, 100, 0);
+}
+section{
+    border-right: 1px solid #eee;
+}
+.container .income-section{
+    width: 20%;
+    height: 100vh;
+    border-left: 1px solid #eee;
+}
+#income-section{
+    overflow: auto;
+    overflow-anchor: 2px;
+}
+#income-section .content div{
+    padding: 2%;
+    background: #e1e1e1;
+    color: black;
+    border-bottom: 1px solid white;
+}
+#icnome-section .content div:first-child{
+    border-top: 1px solid white;
+}
+.container .egress-section{
+    width: 20%;
+    height: 100vh;
+}
+.container .buy-section{
+    width: 20%;
+    height: 100vh;
+}
+.container .debt-section{
+    width: 20%;
+    height: 100vh;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+section .title{
+    padding: 2%;
+}

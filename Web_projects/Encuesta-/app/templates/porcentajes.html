@@ -1,0 +1,45 @@
+<!-- templates/porcentajes.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porcentajes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename ='css/styles.css') }}">
+    <script>
+        // Desactivar la funcionalidad de retroceso
+        history.pushState(null, null, document.URL);
+        window.addEventListener('popstate', function () {
+            history.pushState(null, null, document.URL);
+        });
+    </script>
+</head>
+<body class="body3">
+    <!-- <header class="header2">
+        <a href="{{url_for('main.resultados')}}"><img src="{{ url_for('static', filename ='images/flecha-izquierda.png') }}" alt="Icono Marvy Shopmarket" class="icono-m"></a>
+        <h1>Porcentajes</h1>
+        <a href="{{url_for('main.resultados')}}"><img src="{{ url_for('static', filename ='images/SENA.png') }}" alt="Sena icono" class="icono-m"></a>
+        
+    </header>
+    <div class="Marvy_Shopmarket" style='background-image: url("{{ url_for('static', filename ='images/ilusion.gif') }}"); background-repeat: no-repeat;background-position: center;background-size: cover;'>
+        <img src="{{ url_for('static', filename ='images/Marvy_Shopmarket.png') }}" alt="Icono Marvy Shopmarket" class="icono-x">
+    </div> -->
+    <div class="container">
+        <div class="content">
+            <div class="header" style="background-image: linear-gradient(rgb(17, 17, 17),#262626,rgb(7, 7, 7)); padding: 2%; display: flex;">
+                <a href="{{url_for('main.resultados')}}"><img src="{{ url_for('static', filename ='images/flecha-izquierda.png') }}" alt="Icono Marvy Shopmarket" class="icono-m"></a>
+                <h2 style="width: 100%; text-align: center; padding: 0%;">ANALISIS ESTADISTICO</h2>
+            </div>
+            
+            <ul class="list">
+            {% for porcentaje in porcentajes %}
+                <li class="list-e"><p>{{ porcentaje }}</p></li>
+            {% endfor %}
+            </ul>
+        </div>
+        
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!-- templates/formulario.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registros</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename ='css/styles.css') }}">
+    <script>
+        // Desactivar la funcionalidad de retroceso
+        history.pushState(null, null, document.URL);
+        window.addEventListener('popstate', function () {
+            history.pushState(null, null, document.URL);
+        });
+    </script>
+</head>
+<body class="body2">
+<div class="contenedor">
+    <header class="header2">
+        <a href="{{url_for('main.index')}}"><img src="{{ url_for('static', filename ='images/flecha-izquierda.png') }}" alt="Icono Marvy Shopmarket" class="icono-m"></a>
+        <h1>Registro de encuestas</h1>
+        <a href="{{url_for('main.index')}}"><img src="{{ url_for('static', filename ='images/SENA.png') }}" alt="Sena icono" class="icono-m"></a>
+        
+    </header>
+    <!-- <div class="Marvy_Shopmarket" style='background-image: url("{{ url_for('static', filename ='images/ilusion.gif') }}"); background-repeat: no-repeat;background-position: center;background-size: cover; background-attachment:fixed;'>
+        <img src="{{ url_for('static', filename ='images/Marvy_Shopmarket.png') }}" alt="Icono Marvy Shopmarket" class="icono-x">
+    </div> -->
+    <div class="botons">
+        
+        <div class="content">
+            <a href="{{ url_for('main.borrar_registros') }}" class="btn-2">Borrar registros </a>
+            <a href="{{url_for('main.ver_porcentajes')}}" class="btn-3">Analisis estadistico</a>
+            
+        </div>
+        <ul >
+            <li>P1: ¿Utiliza su tienda algun método digital para registrar la información de sus ventas, proveedores y/o productos?</li>
+            <li>P2: ¿Utiliza su tienda algún metodo tradicional (cuaderno, lapicero, hojas de calculo, etc) para registrar la información de sus ventas, proveedores y/o productos?</li>
+            <li>P3: ¿Lleva un presupuesto y un control de su inventario?</li>
+            <li>P4: ¿Realiza informes de ventas y/o recibos a los clientes y proveedores de su tienda? </li>
+            <li>P5: Del 1 al 10 ¿qué tan seguro se siente con el método que utiliza actualmente su tienda con respecto a la preservación e integridad de los datos?</li>
+            <li>P6: Del 1 al 10 ¿qué tan eficiente calificaría el método para registrar la información de ventas, productos y/o proveedores de su tienda?</li>
+            <li>P7: ¿Sabe Usted qué es software?</li>
+            <li>P8: ¿Estaría Usted interesado en implementar una solución tecnológica para registrar las ventas, proveedores y productos de su tienda?</li>
+            <li>P9: ¿Cree que obtendría un beneficio al implementar un software que apoye los procesos en su tienda?</li>
+            <li>P10: ¿Qué caracteristicas le gustaria que tuviera este software para tiendas como la de Usted?</li>
+        </ul>
+    </div>
+    
+    <div class="contenido">
+    <div class="resultados">
+        <table class="table">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>p1</th>
+                <th>p2</th>
+                <th>p3</th>
+                <th>p4</th>
+                <th>p5</th>
+                <th>p6</th>
+                <th>p7</th>
+                <th>p8</th>
+                <th>p9</th>
+                <th>p10</th>
+            </tr>
+            {% for fila in datos %}
+            <tr>
+                {% for valor in fila %}
+                <td>{{ valor }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+        <div class="container-2">
+            <div class="content">
+                <ul class="list">
+                    <h2 style="padding: 3%; width: 100%; text-align: center; margin-top: 0%;">Porcentaje de respuesta por pregunta</h2>
+                {% for porcentaje in porcentajes %}
+                    <li class="list-e"><p>{{ porcentaje }}</p></li>
+                {% endfor %}
+                </ul>
+            </div>
+            
+        </div>
+        
+    </div>
+    <!-- <script src="{{ url_for('static', filename='script.js') }}"></script> -->
+    <!-- Tu formulario y otros elementos aquí -->
+    <!-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque suscipit, adipisci rerum perferendis eum, nemo iste tempore totam placeat cumque, harum quis. Blanditiis ab dignissimos nesciunt saepe aliquid consequatur non. -->
+    </div>
+    
+</div>
+</body>
+</html>

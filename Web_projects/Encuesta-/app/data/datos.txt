@@ -1,0 +1,47 @@
+<<<<<<< HEAD
+==========================01/12/2023 03:09 AM=================================
+=======
+
+>>>>>>> ad21f27d1452818a6323a5999b2172225f2b2761
+PERSONA ID 1: 1
+NOMBRE TIENDA: Tienda Sofia
+PREGUNTA 1: no
+PREGUNTA 2: si
+PREGUNTA 3: diariamente
+PREGUNTA 4: si
+PREGUNTA 5: 10
+PREGUNTA 6: 7
+PREGUNTA 7: si
+PREGUNTA 8: si
+PREGUNTA 9: si
+<<<<<<< HEAD
+PREGUNTA 10:  Quiero que este sistema me ayude a registrar ventas, productos y proveedores.
+==========================01/12/2023 03:09 AM=================================
+PERSONA ID 2: 2
+NOMBRE TIENDA: 
+PREGUNTA 1: 
+PREGUNTA 2: 
+PREGUNTA 3: 
+PREGUNTA 4: 
+PREGUNTA 5: 
+PREGUNTA 6: 
+PREGUNTA 7: 
+PREGUNTA 8: 
+PREGUNTA 9: 
+PREGUNTA 10:  
+=======
+PREGUNTA 10:  Beneficios economicos, beneficios al cliente, que se abra la mente al cliente, innovador
+
+PERSONA ID 2: 2
+NOMBRE TIENDA: Tienda Johanita
+PREGUNTA 1: no
+PREGUNTA 2: no
+PREGUNTA 3: no
+PREGUNTA 4: no
+PREGUNTA 5: 4
+PREGUNTA 6: 3
+PREGUNTA 7: si
+PREGUNTA 8: si
+PREGUNTA 9: si
+PREGUNTA 10:  Ninguna
+>>>>>>> ad21f27d1452818a6323a5999b2172225f2b2761
