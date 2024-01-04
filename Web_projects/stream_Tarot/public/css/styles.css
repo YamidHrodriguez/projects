@@ -9,7 +9,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    background-image: url(https://i.pinimg.com/originals/5a/28/d8/5a28d827e117b3881e831178396e9d3b.gif);
+    background-image: url(https://steamuserimages-a.akamaihd.net/ugc/1769332288141689003/E140415D697D186BA7619D98712644F864FE3305/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -100,7 +100,7 @@ main{
     height: 380px;
     overflow: hidden;
     border-radius: 50%;
-    background-image: url("/img/yamid-tarot.png");
+    background-image: url("/img/YamidTarot.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-color: rgba(0,0,0,0.5);
