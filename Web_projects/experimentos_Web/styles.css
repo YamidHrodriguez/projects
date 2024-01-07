@@ -1,40 +1,25 @@
 .container{
-    background: lightsalmon;
-    border: 3px solid black;
-    border-radius: 10px;
     display: grid;
-    /*Una manera de hacer responsive, más sencilla*/
-   grid-template-columns: 1fr 1fr;
-   grid-auto-rows: 50px;
-   gap: 4px;
-   padding: 2%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 35px 1fr 100px;
+    min-height: 100vh;
 }
+.container header{
+    background: #08f;
+    grid-column: 1/-1;
 
-@media (width > 500px){
-    .container{
-        grid-template-columns: minmax(200px ,1fr) 1fr 1fr;
-    }
 }
-
-.container div{
-    background: lightblue;
-    border: 2px solid #09f;
-    border-radius: 6px;
+.container aside{
+    background: yellow;
 }
-.container div:first-child{
-    background: rgb(126, 208, 126);
-    grid-column: 1 / 3;
-    grid-row: 1 / 3;
-    z-index: 999;
-    opacity: 0.7;
+.container main{
+    background: red;
+    grid-column: span 2;
 }
-.container div:nth-child(2){
-    background: pink;
-    grid-column: 1 / 3;
-    grid-row: 1 / 3;
-    transform: rotate(180deg);
+.container footer{
+    background: grey;
+    grid-column: 1/-1;
 }
 body{
-    background: #ddd;
-
+    margin: 0
 }
