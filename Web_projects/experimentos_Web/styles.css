@@ -9,7 +9,8 @@
    gap: 4px;
    padding: 2%;
    height: 300px;
-   justify-items: stretch;
+   justify-items: center;
+   align-items: center;
 }
 
 
@@ -20,7 +21,7 @@
 }
 .container div:first-child{
     background: rgb(126, 208, 126);
-    justify-self: end;
+    align-self: center;
 }
 .container div:nth-child(2){
     background: pink;
