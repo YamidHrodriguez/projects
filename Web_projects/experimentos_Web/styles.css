@@ -9,8 +9,9 @@
    gap: 4px;
    padding: 2%;
    height: 300px;
-   justify-items: center;
-   align-items: center;
+   width: 300px;
+   justify-content: center;
+   align-content: center;
 }
 
 
@@ -21,7 +22,6 @@
 }
 .container div:first-child{
     background: rgb(126, 208, 126);
-    align-self: center;
 }
 .container div:nth-child(2){
     background: pink;
