@@ -1,40 +1,30 @@
 .container{
+    background: lightsalmon;
+    border: 3px solid black;
+    border-radius: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 35px 1fr 100px;
-    min-height: 100vh;
-    grid-template-areas:    "header header sideBar"
-        "content content content"
-        "footer footer footer"
-}
-
-@media(width >400px){
-    .container{
-        grid-template-areas: 
-        "header header header"
-        "sideBar content content"
-        "footer footer footer"
-    }
+    /*Una manera de hacer responsive, más sencilla*/
+   grid-template-columns: repeat(3,1fr);
+   grid-auto-rows: 50px;
+   gap: 4px;
+   padding: 2%;
+   height: 300px;
+   justify-items: stretch;
 }
 
 
-.container header{
-    background: #08f;
-    grid-area: header;
+.container div{
+    background: lightblue;
+    border: 2px solid #09f;
+    border-radius: 6px;
 }
-
-.container aside{
-    background: yellow;
-    grid-area: sideBar;
+.container div:first-child{
+    background: rgb(126, 208, 126);
+    justify-self: end;
 }
-.container main{
-    background: red;
-    grid-area: content;
-}
-.container footer{
-    background: grey;
-    grid-area: footer;
+.container div:nth-child(2){
+    background: pink;
 }
 body{
-    margin: 0
+    background: #ddd;
 }
