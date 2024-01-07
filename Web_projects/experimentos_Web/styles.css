@@ -3,22 +3,37 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 35px 1fr 100px;
     min-height: 100vh;
+    grid-template-areas:    "header header sideBar"
+        "content content content"
+        "footer footer footer"
 }
+
+@media(width >400px){
+    .container{
+        grid-template-areas: 
+        "header header header"
+        "sideBar content content"
+        "footer footer footer"
+    }
+}
+
+
 .container header{
     background: #08f;
-    grid-column: 1/-1;
-
+    grid-area: header;
 }
+
 .container aside{
     background: yellow;
+    grid-area: sideBar;
 }
 .container main{
     background: red;
-    grid-column: span 2;
+    grid-area: content;
 }
 .container footer{
     background: grey;
-    grid-column: 1/-1;
+    grid-area: footer;
 }
 body{
     margin: 0
