@@ -10,8 +10,7 @@
    padding: 2%;
    height: 300px;
    width: 300px;
-   justify-content: center;
-   align-content: center;
+   place-content: center;
 }
 
 
