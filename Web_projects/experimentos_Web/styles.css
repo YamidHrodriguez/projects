@@ -1,0 +1,17 @@
+.container{
+    background: lightsalmon;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 25px repeat(10, 1fr);
+    grid-template-rows: repeat(3,100px);
+}
+.container div{
+    background: lightblue;
+    border: 2px solid #09f;
+    border-radius: 6px;
+}
+body{
+    background: #ddd;
+
+}
