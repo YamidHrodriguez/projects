@@ -1,7 +1,10 @@
 //OPERADORES
 
-//Aritmeticos = Aquellos que toman valores númericos (literales o variables)
-
+//Aritmeticos = Aquellos que toman valores númericos (literales o variables) como sus operandos y retornan un valor númerico único.
+let numero1= 10;
+numero1++; //automento;
+numero1--; //decremento
+alert(numero1)
 //De asignación = Asigna valor al operando de la izquierda basado en el valor operando de la derecha.
 let numero = 10; //asignacion 
 
