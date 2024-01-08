@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experimentos Web</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Manejo de base de datos</h1>
+    <div class="container">
+        <div class="signIn" id="signUp">
+            <form method="post" action="/sign-in" id="signUpForm">
+                <h2>Sign Up</h2>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="usuario_Nom" id="name">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="usuario_Correo" id="email">
+                </div>
+                <div>
+                     <label for="password">Password</label>
+                    <input type="password" name="usuario_Contra" id="password">
+                </div>
+                <div>
+                    <input type="submit" value="Sign Up" id="btn-signUp" class="btn">
+                </div>
+                <div>
+                    <button type="button" id="btn-consultar" class="btn">Consultar</button>
+                </div>
+            </form>
+        </div>
+        <div class="login">
+            <form method="post" action="/process-login">
+                <h2>Login</h2>
+                <div>
+                    <label for="username">Usuario</label>
+                    <input type="text" name="username" id="username">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <div>
+                    <input type="submit" value="Login" id="btn-login" class="btn" onclick="mensajeLogin()">
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

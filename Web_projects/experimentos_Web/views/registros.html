@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experimentos Web</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container-access">
+        <div id="bg-black"></div>
+        <div id="login-message" class="login">
+            <h1 class="title" id="title" style="text-align: center; color: black; background-color: white">Bienvenid@</h1>
+            <img src="https://i.pinimg.com/474x/96/c5/e9/96c5e953188a8039e984cd4c4b9d7db6.jpg" alt="welcome!" style="width: 400px; height: 400px;">
+        </div>
+    </div>
+    <div class="container">
+        <div id="registros"></div>
+    </div>
+    <script>
+        
+        const loginMessage = document.getElementById('login-message');
+        const bgBlack = document.getElementById('bg-black');
+        const mensajeRegistros = document.getElementById('title');
+        var urlParams = new URLSearchParams(window.location.search);
+        var registradoExitoso = urlParams.get('registradoExitoso');
+        var usuario_Nom = urlParams.get('usuario_Nom');
+        if(registradoExitoso === 'false'){
+            window.location.href = '/';
+        }else{
+            mensajeRegistros.textContent = 'Bienvenid@ ' + usuario_Nome;
+        }
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
