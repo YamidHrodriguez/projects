@@ -1,0 +1,31 @@
+.container{
+    background: lightsalmon;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: grid;
+    /*Una manera de hacer responsive, más sencilla*/
+   grid-template-columns: repeat(3,50px);
+   grid-auto-rows: 50px;
+   gap: 4px;
+   padding: 2%;
+   height: 300px;
+   width: 300px;
+   justify-content: center;
+   align-content: center;
+}
+
+
+.container div{
+    background: lightblue;
+    border: 2px solid #09f;
+    border-radius: 6px;
+}
+.container div:first-child{
+    background: rgb(126, 208, 126);
+}
+.container div:nth-child(2){
+    background: pink;
+}
+body{
+    background: #ddd;
+}
